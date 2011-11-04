@@ -53,6 +53,7 @@ a U.S. government contract.
 %doc %{_texmfdistdir}/source/latex/sf298/Makefile
 %doc %{_texmfdistdir}/source/latex/sf298/sf298.dtx
 %doc %{_texmfdistdir}/source/latex/sf298/sf298.ins
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -63,3 +64,5 @@ a U.S. government contract.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
