@@ -1,12 +1,6 @@
-# revision 15878
-# category Package
-# catalog-ctan /macros/latex/contrib/sf298
-# catalog-date 2007-01-14 22:06:18 +0100
-# catalog-license lppl
-# catalog-version 1.2
 Name:		texlive-sf298
-Version:	1.2
-Release:	10
+Version:	1.3
+Release:	1
 Summary:	Standard form 298
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/sf298
@@ -35,14 +29,10 @@ a U.S. government contract.
 
 #-----------------------------------------------------------------------
 %files
-%{_texmfdistdir}/tex/latex/sf298/sf298.sty
-%doc %{_texmfdistdir}/doc/latex/sf298/sample298.pdf
-%doc %{_texmfdistdir}/doc/latex/sf298/sample298.tex
-%doc %{_texmfdistdir}/doc/latex/sf298/sf298.pdf
+%{_texmfdistdir}/tex/latex/sf298
+%doc %{_texmfdistdir}/doc/latex/sf298
 #- source
-%doc %{_texmfdistdir}/source/latex/sf298/Makefile
-%doc %{_texmfdistdir}/source/latex/sf298/sf298.dtx
-%doc %{_texmfdistdir}/source/latex/sf298/sf298.ins
+%doc %{_texmfdistdir}/source/latex/sf298
 
 #-----------------------------------------------------------------------
 %prep
@@ -53,17 +43,3 @@ a U.S. government contract.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 1.2-2
-+ Revision: 755917
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 1.2-1
-+ Revision: 719515
-- texlive-sf298
-- texlive-sf298
-- texlive-sf298
-- texlive-sf298
-
