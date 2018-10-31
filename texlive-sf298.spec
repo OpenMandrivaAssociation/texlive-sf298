@@ -1,6 +1,6 @@
 Name:		texlive-sf298
 Version:	1.3
-Release:	1
+Release:	2
 Summary:	Standard form 298
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/sf298
