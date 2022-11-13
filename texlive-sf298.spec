@@ -1,13 +1,13 @@
 Name:		texlive-sf298
-Version:	1.3
-Release:	2
+Version:	41653
+Release:	1
 Summary:	Standard form 298
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/sf298
 License:	LPPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/sf298.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/sf298.doc.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/sf298.source.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/sf298.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/sf298.doc.r%{version}.tar.xz
+Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/sf298.source.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -20,12 +20,12 @@ documentation as part of a document delivered, for instance, on
 a U.S. government contract.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -36,7 +36,8 @@ a U.S. government contract.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1 -a2
+%setup -c -a1 -a2
+%autopatch -p1
 
 %build
 
